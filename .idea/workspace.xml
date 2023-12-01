@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cbaf6c6-dd48-400e-823b-49e013eeb69f" name="Changes" comment="" />
+    <list default="true" id="f394802b-2cc4-432e-9724-92821ef052ff" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2Yw30WtOfNed1nhsP5jmax4Z0YK" />
+  <component name="ProjectId" id="2Yw3Kmcmb9JEpG5UO2KUx2GLEcY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,22 +23,20 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mambasa/Documents/GitHub/db-senior-center-manager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6cbaf6c6-dd48-400e-823b-49e013eeb69f" name="Changes" comment="" />
-      <created>1701422592011</created>
+      <changelist id="f394802b-2cc4-432e-9724-92821ef052ff" name="Changes" comment="" />
+      <created>1701422752943</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701422592011</updated>
-      <workItem from="1701422593008" duration="29000" />
-      <workItem from="1701422636634" duration="1000" />
+      <updated>1701422752943</updated>
+      <workItem from="1701422753960" duration="32000" />
+      <workItem from="1701422791245" duration="1000" />
     </task>
     <servers />
   </component>
