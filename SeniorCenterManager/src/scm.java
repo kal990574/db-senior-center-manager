@@ -160,12 +160,10 @@ public class SeniorDB {
 
 		// 입력받은 주소에서 '로' 찾기
 		int index = address.lastIndexOf("로");
-		System.out.println(index);
 		
 		String roAddress = "";
 		if (index != -1) {
 			int spaceIndex = address.lastIndexOf(" ", index);
-			System.out.println(spaceIndex);
 			if (spaceIndex != -1)
 				roAddress = address.substring(spaceIndex + 1, index + 1);
 			else
@@ -291,14 +289,14 @@ public class SeniorDB {
 	
 	// 내 경로당에 추가하기
 	public static void insertMySC(String uID, int scID) throws SQLException{
-		String query1 = "select * from MySeniorCenter values ('"+ uID +"', '"+ scID +"');";
+		String query1 = "select * from MySeniorCenter values ('"+ uID +"', "+ scID +");";
 		try {
 			statement = connection.createStatement();
 			result = statement.executeQuery(query1);
 			
 			if(!result.next())
 			{
-				String query2 = "insert into MySeniorCenter values ('"+ uID +"', '"+ scID +"');";
+				String query2 = "insert into MySeniorCenter values ('"+ uID +"', "+ scID +");";
 				statement.executeUpdate(query2);
 				System.out.println("내 경로당 목록에 추가되었습니다.");
 			}
@@ -313,7 +311,7 @@ public class SeniorDB {
 	
 	// 위치 정보 조회
 	public static void printAddress(int scID) throws SQLException{
-		String query1 = "select scAddress from SeniorCenter where scID='"+ scID +"';";
+		String query1 = "select scAddress from SeniorCenter where scID="+ scID +";";
 		try {
 			statement = connection.createStatement();
         	result = statement.executeQuery(query1);
@@ -399,7 +397,6 @@ public class SeniorDB {
 	public static void review(String uID, int scID, String scName) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String inquiry = "select * from Review where scID='" + scID + "';";
 		try {
 			statement = connection.createStatement();
 
@@ -481,7 +478,7 @@ public class SeniorDB {
 	public static void updateReview(String uID, int scID) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String showUpdate = "select * from Review where scID = '" + scID + "' and uID ='" + uID + "';";
+		String showUpdate = "select * from Review where scID=" + scID + " and uID ='" + uID + "';";
 		
 		try {
 			statement = connection.createStatement();
@@ -558,7 +555,7 @@ public class SeniorDB {
 	public static void deleteReview(String uID, int scID) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String showDelete = "select * from Review where scID = '" + scID + "' and uID ='" + uID + "';";
+		String showDelete = "select * from Review where scID=" + scID + " and uID ='" + uID + "';";
 		try {
 			statement = connection.createStatement();
 			result = statement.executeQuery(showDelete);
@@ -613,7 +610,7 @@ public class SeniorDB {
 	public static void community(String uID, int scID, String scName) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String inquiry = "select * from Post where scID='" + scID + "';";
+		String inquiry = "select * from Post where scID=" + scID + ";";
 		try {
 			statement = connection.createStatement();
 
@@ -696,7 +693,7 @@ public class SeniorDB {
 	public static void updatePost(String uID, int scID) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String showUpdate = "select * from Post where scID = '" + scID + "' and uID ='" + uID + "';";
+		String showUpdate = "select * from Post where scID=" + scID + " and uID ='" + uID + "';";
 		try {
 			result = statement.executeQuery(showUpdate);
 			while (result.next()){
@@ -772,7 +769,7 @@ public class SeniorDB {
 	public static void deletePost(String uID, int scID) throws SQLException {
 		Scanner scan = new Scanner(System.in);
 		
-		String showDelete = "select * from Post where scID = '" + scID + "' and uID ='" + uID + "';";
+		String showDelete = "select * from Post where scID=" + scID + " and uID ='" + uID + "';";
 		try {
 			result = statement.executeQuery(showDelete);
 			while (result.next()){
@@ -825,7 +822,7 @@ public class SeniorDB {
 	// 근처 무료 급식소 조회
 	public static void inquiryFMC(int scID, String scName) throws SQLException {
 		String scAddress="";
-		String query6 = "select scAddress from SeniorCenter where scID='"+ scID +"';";
+		String query6 = "select scAddress from SeniorCenter where scID="+ scID +";";
 		
 		try {
 			statement = connection.createStatement();
