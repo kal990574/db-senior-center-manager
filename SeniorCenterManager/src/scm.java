@@ -289,7 +289,7 @@ public class SeniorDB {
 	
 	// 내 경로당에 추가하기
 	public static void insertMySC(String uID, int scID) throws SQLException{
-		String query1 = "select * from MySeniorCenter values ('"+ uID +"', "+ scID +");";
+		String query1 = "select * from MySeniorCenter where uID='"+ uID +"' and scID="+ scID +";";
 		try {
 			statement = connection.createStatement();
 			result = statement.executeQuery(query1);
@@ -302,7 +302,6 @@ public class SeniorDB {
 			}
 			else
 				System.out.println("이미 추가된 경로당입니다.");
-				
 			
 		}catch(SQLException ex){
         	throw ex;
@@ -396,6 +395,8 @@ public class SeniorDB {
 	// 리뷰
 	public static void review(String uID, int scID, String scName) throws SQLException {
 		Scanner scan = new Scanner(System.in);
+		
+		 String inquiry = "select * from Review where scID='" + scID + "';";
 		
 		try {
 			statement = connection.createStatement();
